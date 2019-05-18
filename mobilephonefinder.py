@@ -1,4 +1,3 @@
-import os
 items = []
 class TrieNode:
     def __init__(self):
@@ -52,11 +51,14 @@ def read_file():
             line = str(f.readline().strip('\r\n'))
         return root
 
-root = read_file()
-print('Input: ')
-inp = input()
-root.search(inp)
-if len(items) == 0:
-    print('')
-else:
-    print(items[:10])
+
+if __name__ == "__main__":
+
+    root = read_file()
+    print('Input: ')
+    inp = input()
+    root.search(inp)
+    if len(items) == 0:
+        print('')
+    else:
+        print(items[:10])
